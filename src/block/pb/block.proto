@@ -1,0 +1,12 @@
+syntax="proto3";
+
+package blockpb;
+
+message Block{
+
+    int64 index = 1;
+    string previousHash = 2;
+    int64 timestamp = 3;
+    repeated string transaction = 4;
+
+}
