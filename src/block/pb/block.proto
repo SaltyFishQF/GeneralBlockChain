@@ -5,8 +5,15 @@ package blockpb;
 message Block{
 
     int64 index = 1;
-    string previousHash = 2;
-    int64 timestamp = 3;
-    repeated string transaction = 4;
+    string hash = 2;
+    string previousHash = 3;
+    int64 timestamp = 4;
+    repeated Transaction transaction = 5;
 
+}
+
+message Transaction{
+    string from = 1;
+    string to = 2;
+    string account = 3;
 }
