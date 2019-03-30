@@ -3,7 +3,6 @@ syntax="proto3";
 package blockpb;
 
 message Block{
-
     int64 index = 1;
     string hash = 2;
     string previousHash = 3;
@@ -15,5 +14,5 @@ message Block{
 message Transaction{
     string from = 1;
     string to = 2;
-    string account = 3;
+    int32 account = 3;
 }

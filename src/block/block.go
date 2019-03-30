@@ -7,54 +7,29 @@ import (
 	"github.com/gogo/protobuf/proto"
 )
 
-type Block struct {
-	index        int64
-	hash         string
-	previousHash string
-	transactions []*Transaction
-	timestamp    int64
-}
-
-func ToProto(block *Block) proto.Message {
-	return &blockpb.Block{
-		Index:        block.index,
-		PreviousHash: block.previousHash,
-		Transaction:  []*blockpb.Transaction{},
-		Timestamp:    block.timestamp,
+func CreateGenesisBlock(time int64, transactions []*blockpb.Transaction) *blockpb.Block {
+	b := blockpb.Block{
+		Index:        0,
+		PreviousHash: "",
+		Timestamp:    0,
+		Transaction:  nil,
 	}
-}
-
-func CalHash(block *Block) string {
-	serialBlock := ToProto(block)
-	byteBlock, _ := proto.Marshal(serialBlock)
-	hash := sha1.Sum(byteBlock)
-	return hex.EncodeToString(hash[:])
-}
-
-func CreateBlock(index int64, preHash string, trans []string, timestamp int64) *Block {
-	b := Block{
-		index, "", preHash, trans, timestamp,
-	}
-	b.hash = CalHash(&b)
+	serialB, _ := proto.Marshal(&b)
+	hashB := sha1.Sum(serialB)
+	b.Hash = hex.EncodeToString(hashB[:])
 	return &b
 }
 
-func CreateGenesisBlock() *Block {
-	b := Block{
-		0, "", "", nil, 0,
+func CreateBlock(index int64, previousHash string,
+	time int64, transactions []*blockpb.Transaction) *blockpb.Block {
+	b := blockpb.Block{
+		Index:        index,
+		PreviousHash: previousHash,
+		Timestamp:    time,
+		Transaction:  transactions,
 	}
-	b.hash = CalHash(&b)
+	serialB, _ := proto.Marshal(&b)
+	hashB := sha1.Sum(serialB)
+	b.Hash = hex.EncodeToString(hashB[:])
 	return &b
-}
-
-func GetHash(b *Block) string {
-	return b.hash
-}
-
-func GetIndex(b *Block) int64 {
-	return b.index
-}
-
-func GetTime(b *Block) int64 {
-	return b.timestamp
 }

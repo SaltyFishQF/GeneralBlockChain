@@ -1,17 +1,11 @@
 package block
 
-type Transaction struct {
-	from    string
-	to      string
-	account string
-}
+import "block/pb"
 
-func GetFrom(t *Transaction) string {
-	return t.from
-}
-func GetTo(t *Transaction) string {
-	return t.to
-}
-func GetAccount(t *Transaction) string {
-	return t.account
+func CreateTransaction(from string, to string, account int32) *blockpb.Transaction {
+	return &blockpb.Transaction{
+		From:    from,
+		To:      to,
+		Account: account,
+	}
 }
