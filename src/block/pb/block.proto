@@ -11,12 +11,25 @@ message Block{
 message BlockHeader{
     int64 index = 1;
     string previousHash = 2;
-    int64 timestamp = 3;
+    bytes digest = 3;
+    string cloudAddress = 4;
+    int64 timestamp = 5;
+    bytes merkleRoot = 6;
+    float version = 7;
+    int64 size = 8;
 }
 
 message Transaction{
-    string from = 1;
-    string to = 2;
-    int32 account = 3;
-    int64 timestamp = 4;
+    bytes hash = 1;
+    string tx_type = 2;
+    bytes doc = 3;
+    bytes user = 4;
+    bytes value = 5;
+    uint64 nonce = 6;
+    uint32 chain_id = 7;
+
+    bytes payload = 10;
+
+    bytes sign = 22;
+    bytes payerSign = 23;
 }
