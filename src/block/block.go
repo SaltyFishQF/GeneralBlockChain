@@ -8,28 +8,27 @@ import (
 )
 
 func CreateGenesisBlock(time int64, transactions []*blockpb.Transaction) *blockpb.Block {
-	b := blockpb.Block{
-		Index:        0,
-		PreviousHash: "",
-		Timestamp:    0,
-		Transaction:  nil,
-	}
-	serialB, _ := proto.Marshal(&b)
+	bh := CreateBlockHeader(0, "", time)
+	serialB, _ := proto.Marshal(bh)
 	hashB := sha1.Sum(serialB)
-	b.Hash = hex.EncodeToString(hashB[:])
+	b := blockpb.Block{
+		Header:      bh,
+		Transaction: nil,
+		Hash:        hex.EncodeToString(hashB[:]),
+	}
 	return &b
 }
 
 func CreateBlock(index int64, previousHash string,
 	time int64, transactions []*blockpb.Transaction) *blockpb.Block {
-	b := blockpb.Block{
-		Index:        index,
-		PreviousHash: previousHash,
-		Timestamp:    time,
-		Transaction:  transactions,
-	}
-	serialB, _ := proto.Marshal(&b)
+
+	bh := CreateBlockHeader(index, previousHash, time)
+	serialB, _ := proto.Marshal(bh)
 	hashB := sha1.Sum(serialB)
-	b.Hash = hex.EncodeToString(hashB[:])
+	b := blockpb.Block{
+		Header:      bh,
+		Transaction: transactions,
+		Hash:        hex.EncodeToString(hashB[:]),
+	}
 	return &b
 }

@@ -3,16 +3,20 @@ syntax="proto3";
 package blockpb;
 
 message Block{
-    int64 index = 1;
-    string hash = 2;
-    string previousHash = 3;
-    int64 timestamp = 4;
-    repeated Transaction transaction = 5;
+    BlockHeader header = 1;
+    repeated Transaction transaction = 2;
+    string hash = 3;
+}
 
+message BlockHeader{
+    int64 index = 1;
+    string previousHash = 2;
+    int64 timestamp = 3;
 }
 
 message Transaction{
     string from = 1;
     string to = 2;
     int32 account = 3;
+    int64 timestamp = 4;
 }
