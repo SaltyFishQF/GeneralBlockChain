@@ -1,11 +1,30 @@
 package block
 
-import "block/pb"
+import (
+	"block/pb"
+	"crypto/sha256"
+	"encoding/hex"
+	"strconv"
+	"time"
+)
 
-func CreateTransaction(from string, to string, account int32) *blockpb.Transaction {
+func CreateTransaction(txType int32, doc string, user string, value string, nonce uint64) *blockpb.Transaction {
+	t := time.Now().Unix()
+	hash := sha256.New()
+	hash.Write([]byte(doc))
+	hash.Write([]byte(user))
+	hash.Write([]byte(value))
+	hash.Write([]byte(strconv.Itoa(int(txType))))
+	hash.Write([]byte(strconv.FormatInt(t, 10)))
+	hash.Write([]byte(strconv.FormatInt(int64(nonce), 10)))
+	h := hash.Sum(nil)
 	return &blockpb.Transaction{
-		Doc:   from,
-		User:  to,
-		Value: account,
+		Id:        hex.EncodeToString(h),
+		TxType:    txType,
+		Doc:       doc,
+		User:      user,
+		Value:     value,
+		Nonce:     nonce,
+		Timestamp: t,
 	}
 }
