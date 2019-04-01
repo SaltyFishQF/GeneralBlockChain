@@ -5,10 +5,11 @@ import (
 	"crypto/sha1"
 	"encoding/hex"
 	"github.com/gogo/protobuf/proto"
+	"time"
 )
 
-func CreateGenesisBlock(time int64, transactions []*blockpb.Transaction) *blockpb.Block {
-	bh := CreateBlockHeader(0, "", time)
+func CreateGenesisBlock() *blockpb.Block {
+	bh := CreateBlockHeader(0, "", time.Now().Unix())
 	serialB, _ := proto.Marshal(bh)
 	hashB := sha1.Sum(serialB)
 	b := blockpb.Block{

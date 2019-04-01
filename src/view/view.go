@@ -1,8 +1,7 @@
-package http
+package view
 
 import (
-	"block"
-	"fmt"
+	"controller"
 	"net/http"
 	"strconv"
 )
@@ -15,7 +14,5 @@ func AddTransaction(w http.ResponseWriter, r *http.Request) {
 	value := r.Form["value"][0]
 	nonce, _ := strconv.ParseInt(r.Form["nonce"][0], 10, 64)
 	t, _ := strconv.Atoi(txType)
-	tx := block.CreateTransaction(int32(t), user, doc, value, uint64(nonce))
-	fmt.Println(tx.Id)
-
+	controller.AddTransaction(int32(t), user, doc, value, uint64(nonce))
 }

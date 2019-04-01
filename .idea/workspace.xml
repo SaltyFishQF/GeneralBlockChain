@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a85c0c62-4911-4095-a2cb-3342b43a5c1a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/common/blockconf.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/http/controller.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/http/dao.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/http/mydb/dbConn.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/html/addTransaction.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/html/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/html/user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/view.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/block/pb/block.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/block/pb/block.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/block/pb/block.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/block/pb/block.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/block/transaction.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/block/transaction.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/block/block.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/block/block.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/mydb/dbConn.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/mydb/dbConn.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.go" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -46,37 +41,38 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="go" value="23" />
+          <entry key="go" value="27" />
           <entry key="html" value="3" />
           <entry key="proto" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Go" value="23" />
+          <entry key="Go" value="27" />
           <entry key="HTML" value="3" />
           <entry key="PROTO" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="go" value="4463" />
+          <entry key="go" value="6007" />
           <entry key="html" value="161" />
           <entry key="proto" value="898" />
-          <entry key="txt" value="122" />
+          <entry key="txt" value="128" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="4463" />
+          <entry key="Go" value="6007" />
           <entry key="HTML" value="161" />
-          <entry key="PLAIN_TEXT" value="122" />
+          <entry key="PLAIN_TEXT" value="128" />
           <entry key="PROTO" value="898" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.go.postfix.template.usages.trigger">
         <counts>
-          <entry key=".append" value="4" />
+          <entry key=".append" value="5" />
+          <entry key=".p" value="1" />
           <entry key=".panic" value="1" />
         </counts>
       </usages-collector>
@@ -87,17 +83,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/block/pb/block.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+            <state relative-caret-position="-20">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/dao/dao.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="477">
+              <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+              <folding>
+                <element signature="e#13#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/block/pb/block.pb.go">
+        <entry file="file://$PROJECT_DIR$/src/mydb/dbConn.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+            <state relative-caret-position="168">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+              <folding>
+                <element signature="e#14#76#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/controller.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+              <folding>
+                <element signature="e#20#46#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,22 +128,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" column="54" lean-forward="true" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
-              <folding>
-                <element signature="e#14#50#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/http/controller.go">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/view.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="17" column="76" lean-forward="true" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
+            <state relative-caret-position="192">
+              <caret line="8" column="41" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="41" />
               <folding>
-                <element signature="e#14#45#0" expanded="true" />
+                <element signature="e#14#63#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -129,17 +149,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/block/block.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/block/transaction.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+            <state relative-caret-position="189">
+              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <folding>
+                <element signature="e#15#102#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -149,8 +163,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go File" />
         <option value="HTML File" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
@@ -169,7 +183,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/block/blockHeader.go" />
-        <option value="$PROJECT_DIR$/src/block/block.go" />
         <option value="$PROJECT_DIR$/src/block/pb/block.pb.go" />
         <option value="$PROJECT_DIR$/src/common/blockconf.go" />
         <option value="$PROJECT_DIR$/src/http/mydb/dbConn.go" />
@@ -178,9 +191,16 @@
         <option value="$PROJECT_DIR$/webapp/html/user.html" />
         <option value="$PROJECT_DIR$/webapp/html/addTransaction.html" />
         <option value="$PROJECT_DIR$/src/block/pb/block.proto" />
-        <option value="$PROJECT_DIR$/src/main/main.go" />
         <option value="$PROJECT_DIR$/src/block/transaction.go" />
+        <option value="$PROJECT_DIR$/src/http/mydb/view.go" />
         <option value="$PROJECT_DIR$/src/http/controller.go" />
+        <option value="$PROJECT_DIR$/src/http/view/view.go" />
+        <option value="$PROJECT_DIR$/src/http/view.go" />
+        <option value="$PROJECT_DIR$/src/view/view.go" />
+        <option value="$PROJECT_DIR$/src/main/main.go" />
+        <option value="$PROJECT_DIR$/src/controller/controller.go" />
+        <option value="$PROJECT_DIR$/src/block/block.go" />
+        <option value="$PROJECT_DIR$/src/dao/dao.go" />
       </list>
     </option>
   </component>
@@ -217,24 +237,31 @@
               <item name="GeneralBlockChain" type="b2602c69:ProjectViewProjectNode" />
               <item name="GeneralBlockChain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="block" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GeneralBlockChain" type="b2602c69:ProjectViewProjectNode" />
               <item name="GeneralBlockChain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GeneralBlockChain" type="b2602c69:ProjectViewProjectNode" />
               <item name="GeneralBlockChain" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GeneralBlockChain" type="b2602c69:ProjectViewProjectNode" />
               <item name="GeneralBlockChain" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="mydb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GeneralBlockChain" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GeneralBlockChain" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -250,7 +277,7 @@
     <property name="GO_FMT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554037133790" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554112229916" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
@@ -258,6 +285,15 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/dao" />
+      <recent name="$PROJECT_DIR$/src/controller" />
+      <recent name="$PROJECT_DIR$/src/view" />
+      <recent name="$PROJECT_DIR$/src/http/view" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -296,7 +332,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553830142860</updated>
-      <workItem from="1553830144477" duration="36703000" />
+      <workItem from="1553830144477" duration="43693000" />
     </task>
     <task id="LOCAL-00001" summary="add slice">
       <created>1553878490787</created>
@@ -326,11 +362,18 @@
       <option name="project" value="LOCAL" />
       <updated>1553938583750</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ver2.0">
+      <created>1554037172316</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1554037172316</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36703000" />
+    <option name="totallyTimeSpent" value="43693000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -350,7 +393,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.17277168" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.17277168" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.3298731" />
@@ -358,7 +401,7 @@
       <window_info anchor="bottom" id="Statistic" order="3" weight="0.3298731" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.3298731" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.3298731" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
@@ -386,7 +429,8 @@
     <MESSAGE value="去掉了block和blockpb之间的转换，直接使用pb层" />
     <MESSAGE value=" 添加header，把header和transaction封装到block中" />
     <MESSAGE value="完善header以及transaction" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善header以及transaction" />
+    <MESSAGE value="ver2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="ver2.0" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file:///usr/local/Cellar/go/1.12.1/libexec/src/builtin/builtin.go">
@@ -403,16 +447,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/http/mydb/dbConn.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
-          <folding>
-            <element signature="e#14#76#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -424,13 +458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/http/dao.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -458,10 +485,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/block/pb/block.proto">
+    <entry file="file://$PROJECT_DIR$/src/block/transaction.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        <state relative-caret-position="96">
+          <caret line="10" column="88" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mydb/dbConn.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding>
+            <element signature="e#14#76#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -472,36 +509,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/block/block.go">
+    <entry file="file://$PROJECT_DIR$/src/controller/controller.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        <state relative-caret-position="202">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <element signature="e#20#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/block/pb/block.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/view.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="41" />
+          <folding>
+            <element signature="e#14#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="54" lean-forward="true" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+        <state relative-caret-position="120">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/block/block.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding>
-            <element signature="e#14#50#0" expanded="true" />
+            <element signature="e#15#102#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/block/transaction.go">
+    <entry file="file://$PROJECT_DIR$/src/dao/dao.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/http/controller.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" column="76" lean-forward="true" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
+        <state relative-caret-position="477">
+          <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
           <folding>
-            <element signature="e#14#45#0" expanded="true" />
+            <element signature="e#13#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
