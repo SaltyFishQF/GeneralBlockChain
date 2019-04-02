@@ -15,7 +15,7 @@ message BlockHeader{
     string cloudAddress = 4;
     int64 timestamp = 5;
     string merkleRoot = 6;
-    float version = 7;
+    int32 version = 7;
     int64 size = 8;
 }
 

@@ -1,3 +1,3 @@
 package common
 
-const TransactionNum = 100
+const TransactionNum = 10

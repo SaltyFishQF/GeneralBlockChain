@@ -1,13 +1,13 @@
 package main
 
 import (
-	"dao"
+	"controller"
 	"net/http"
 	"view"
 )
 
 func main() {
-	dao.GetLastBlockNum()
+	controller.CheckGenesisBlock()
 	server := http.Server{
 		Addr: "localhost:8080",
 	}

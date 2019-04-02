@@ -7,5 +7,6 @@ func CreateBlockHeader(index int64, phash string, t int64) *blockpb.BlockHeader 
 		Index:        index,
 		PreviousHash: phash,
 		Timestamp:    t,
+		Version:      2,
 	}
 }
