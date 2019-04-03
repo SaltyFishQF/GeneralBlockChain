@@ -2,17 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a85c0c62-4911-4095-a2cb-3342b43a5c1a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/view/blockView.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/html/blockview.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/js/blockview.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/go.imports.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/errorUtil.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/jsonUtil.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/css/blockview.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/html/singleBlock.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/js/singleBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/block/blockHeader.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/block/blockHeader.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/block/transaction.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/block/transaction.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/block/block.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/block/block.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/block/pb/block.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/block/pb/block.pb.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/blockController.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/blockController.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/transactionBlock.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/transactionController.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/blockDao.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/blockDao.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/transactionDao.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/transactionDao.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/view.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/transactionView.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/blockView.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/blockView.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/html/blockview.html" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/html/blockview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/js/blockview.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/js/blockview.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,36 +53,42 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="go" value="62" />
-          <entry key="html" value="7" />
-          <entry key="js" value="1" />
-          <entry key="proto" value="2" />
+          <entry key="css" value="1" />
+          <entry key="go" value="79" />
+          <entry key="html" value="10" />
+          <entry key="js" value="20" />
+          <entry key="proto" value="3" />
+          <entry key="ts" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Go" value="62" />
-          <entry key="HTML" value="7" />
-          <entry key="JavaScript" value="1" />
-          <entry key="PROTO" value="2" />
+          <entry key="CSS" value="1" />
+          <entry key="Go" value="79" />
+          <entry key="HTML" value="10" />
+          <entry key="JavaScript" value="20" />
+          <entry key="PROTO" value="3" />
+          <entry key="TypeScript" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="go" value="9565" />
-          <entry key="html" value="172" />
-          <entry key="js" value="15" />
-          <entry key="proto" value="920" />
-          <entry key="txt" value="151" />
+          <entry key="css" value="36" />
+          <entry key="go" value="10695" />
+          <entry key="html" value="596" />
+          <entry key="js" value="1341" />
+          <entry key="proto" value="930" />
+          <entry key="txt" value="163" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="9565" />
-          <entry key="HTML" value="172" />
-          <entry key="JavaScript" value="15" />
-          <entry key="PLAIN_TEXT" value="151" />
-          <entry key="PROTO" value="920" />
+          <entry key="CSS" value="36" />
+          <entry key="Go" value="10695" />
+          <entry key="HTML" value="596" />
+          <entry key="JavaScript" value="1341" />
+          <entry key="PLAIN_TEXT" value="163" />
+          <entry key="PROTO" value="930" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.go.postfix.template.usages.trigger">
@@ -92,12 +103,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/transactionDao.go">
+        <entry file="file://$PROJECT_DIR$/src/view/transactionView.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+            <state relative-caret-position="312">
+              <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/blockView.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
               <folding>
-                <element signature="e#13#49#0" expanded="true" />
+                <element signature="e#14#91#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,8 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dao/blockDao.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+            <state relative-caret-position="6">
+              <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
               <folding>
                 <element signature="e#13#50#0" expanded="true" />
               </folding>
@@ -116,52 +136,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/block/block.go">
+        <entry file="file://$PROJECT_DIR$/src/block/pb/block.pb.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+            <state relative-caret-position="234">
+              <caret line="77" column="25" lean-forward="true" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/blockController.go">
+        <entry file="file://$PROJECT_DIR$/src/main/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+            <state relative-caret-position="445">
+              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding>
-                <element signature="e#20#73#0" expanded="true" />
+                <element signature="e#14#58#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/transactionController.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1079">
-              <caret line="55" column="41" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
-              <folding>
-                <element signature="e#20#68#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/html/addTransaction.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/html/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -169,26 +159,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/html/blockview.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/webapp/js/blockview.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="264">
+              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="13" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/html/user.html">
+        <entry file="file://$PROJECT_DIR$/webapp/html/singleBlock.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            <state relative-caret-position="-355">
+              <caret line="28" column="34" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/js/blockview.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="10" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/blockController.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+              <folding>
+                <element signature="e#20#73#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webapp/js/singleBlock.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -200,8 +211,16 @@
       <list>
         <option value="Go File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>decode</find>
+      <find>deserializeBinary</find>
+      <find>\</find>
+    </findStrings>
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.12.1/libexec" />
   <component name="Git.Settings">
@@ -217,7 +236,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/block/pb/block.pb.go" />
         <option value="$PROJECT_DIR$/src/http/mydb/dbConn.go" />
         <option value="$PROJECT_DIR$/src/http/dao.go" />
         <option value="$PROJECT_DIR$/webapp/html/index.html" />
@@ -231,25 +249,39 @@
         <option value="$PROJECT_DIR$/src/controller/controller.go" />
         <option value="$PROJECT_DIR$/src/dao/dao.go" />
         <option value="$PROJECT_DIR$/src/common/blockconf.go" />
-        <option value="$PROJECT_DIR$/src/main/main.go" />
-        <option value="$PROJECT_DIR$/src/block/pb/block.proto" />
-        <option value="$PROJECT_DIR$/src/view/blockView.go" />
         <option value="$PROJECT_DIR$/src/controller/transactionBlock.go" />
-        <option value="$PROJECT_DIR$/src/block/block.go" />
-        <option value="$PROJECT_DIR$/src/view/transactionView.go" />
         <option value="$PROJECT_DIR$/src/block/blockHeader.go" />
-        <option value="$PROJECT_DIR$/src/dao/blockDao.go" />
-        <option value="$PROJECT_DIR$/src/controller/blockController.go" />
         <option value="$PROJECT_DIR$/src/block/transaction.go" />
         <option value="$PROJECT_DIR$/src/dao/transactionDao.go" />
         <option value="$PROJECT_DIR$/src/controller/transactionController.go" />
+        <option value="$PROJECT_DIR$/src/util/jsonUtil.go" />
+        <option value="$PROJECT_DIR$/src/util/errorUtil.go" />
+        <option value="$PROJECT_DIR$/src/block/block.go" />
+        <option value="$PROJECT_DIR$/webapp/css/blockview.css" />
+        <option value="$PROJECT_DIR$/src/block/pb/block.proto" />
+        <option value="$PROJECT_DIR$/webapp/js/myproto_pb.js" />
+        <option value="$PROJECT_DIR$/webapp/js/exports.js" />
+        <option value="$PROJECT_DIR$/src/view/transactionView.go" />
+        <option value="$PROJECT_DIR$/src/block/pb/block.pb.go" />
         <option value="$PROJECT_DIR$/webapp/html/blockview.html" />
+        <option value="$PROJECT_DIR$/src/controller/blockController.go" />
+        <option value="$PROJECT_DIR$/src/dao/blockDao.go" />
+        <option value="$PROJECT_DIR$/src/main/main.go" />
         <option value="$PROJECT_DIR$/webapp/js/blockview.js" />
+        <option value="$PROJECT_DIR$/webapp/html/singleBlock.html" />
+        <option value="$PROJECT_DIR$/src/view/blockView.go" />
+        <option value="$PROJECT_DIR$/webapp/js/singleBlock.js" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -331,12 +363,24 @@
               <item name="GeneralBlockChain" type="b2602c69:ProjectViewProjectNode" />
               <item name="GeneralBlockChain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GeneralBlockChain" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GeneralBlockChain" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GeneralBlockChain" type="b2602c69:ProjectViewProjectNode" />
               <item name="GeneralBlockChain" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GeneralBlockChain" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GeneralBlockChain" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GeneralBlockChain" type="b2602c69:ProjectViewProjectNode" />
@@ -361,24 +405,28 @@
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="GO_FMT" value="true" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554252058531" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554296738988" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/webapp/js" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/webapp/js" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/dao" />
       <recent name="$PROJECT_DIR$/src/controller" />
       <recent name="$PROJECT_DIR$/src/view" />
-      <recent name="$PROJECT_DIR$/src/http/view" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -420,7 +468,7 @@
       <updated>1553830142860</updated>
       <workItem from="1553830144477" duration="48622000" />
       <workItem from="1554123723717" duration="6081000" />
-      <workItem from="1554195850671" duration="9401000" />
+      <workItem from="1554195850671" duration="25689000" />
     </task>
     <task id="LOCAL-00001" summary="add slice">
       <created>1553878490787</created>
@@ -471,11 +519,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554193951103</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="demo v0.0.1">
+      <created>1554252115114</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1554252115115</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64104000" />
+    <option name="totallyTimeSpent" value="80392000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -534,7 +589,8 @@
     <MESSAGE value="ver2.0" />
     <MESSAGE value="nil" />
     <MESSAGE value="重构，解决[]uint8问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="重构，解决[]uint8问题" />
+    <MESSAGE value="demo v0.0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="demo v0.0.1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file:///usr/local/Cellar/go/1.12.1/libexec/src/builtin/builtin.go">
@@ -558,13 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/blockView.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mydb/dbConn.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -582,16 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/transactionView.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="15" column="60" lean-forward="true" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
-          <folding>
-            <element signature="e#14#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/Cellar/go/1.12.1/libexec/src/net/http/server.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -606,24 +645,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/block/pb/block.pb.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="191" lean-forward="true" selection-start-line="191" selection-end-line="191" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/block/blockHeader.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
           <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/block/pb/block.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -633,23 +658,6 @@
           <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
           <folding>
             <element signature="e#15#89#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/blockDao.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="e#13#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -664,44 +672,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/block/block.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/blockController.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding>
-            <element signature="e#20#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/transactionController.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1079">
-          <caret line="55" column="41" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
-          <folding>
-            <element signature="e#20#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/html/addTransaction.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/html/user.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/errorUtil.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -712,17 +693,177 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/html/blockview.html">
+    <entry file="file://$PROJECT_DIR$/webapp/html/addTransaction.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        <state relative-caret-position="192">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/css/blockview.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/block/block.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/transactionController.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/jsonUtil.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/block/pb/block.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-236">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/js/myproto_pb.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/js/block_pb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4632">
+          <caret line="193" column="31" lean-forward="true" selection-start-line="193" selection-start-column="12" selection-end-line="193" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="17970" selection-start-line="3" selection-start-column="17970" selection-end-line="3" selection-end-column="17970" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="14290" column="4" selection-start-line="14290" selection-start-column="4" selection-end-line="14290" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/go/src/github.com/gogo/protobuf/proto/lib.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="337" column="5" selection-start-line="337" selection-start-column="5" selection-end-line="337" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/js/exports.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/node_modules/google-protobuf/google-protobuf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1947" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/js/bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2760">
+          <caret line="115" selection-start-line="115" selection-end-line="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/blockController.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+          <folding>
+            <element signature="e#20#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="e#14#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/transactionView.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/js/blockview.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state>
+          <caret selection-end-line="10" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/html/blockview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="13" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/html/singleBlock.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-355">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/block/pb/block.pb.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="77" column="25" lean-forward="true" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/blockView.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding>
+            <element signature="e#14#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/blockDao.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+          <folding>
+            <element signature="e#13#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/js/singleBlock.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
         </state>
       </provider>
     </entry>

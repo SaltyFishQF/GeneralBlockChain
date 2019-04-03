@@ -25,3 +25,11 @@ func PreCreateBlock(transactions []*blockpb.Transaction) *blockpb.Block {
 	block := block.CreateBlock(BLOCK.Header.Index+1, BLOCK.Hash, time.Now().Unix(), transactions)
 	return block
 }
+
+func GetAllBlock() []*blockpb.Block {
+	return dao.GetAllBlock()
+}
+
+func GetBlockByHash(h string) *blockpb.Block {
+	return dao.GetBlockByHash(h)
+}

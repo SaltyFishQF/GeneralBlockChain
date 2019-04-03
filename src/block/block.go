@@ -3,6 +3,7 @@ package block
 import (
 	"block/pb"
 	"crypto/sha1"
+	"crypto/sha256"
 	"encoding/hex"
 	"github.com/gogo/protobuf/proto"
 	"time"
@@ -11,7 +12,7 @@ import (
 func CreateGenesisBlock() *blockpb.Block {
 	bh := CreateBlockHeader(0, "", time.Now().Unix())
 	serialB, _ := proto.Marshal(bh)
-	hashB := sha1.Sum(serialB)
+	hashB := sha256.Sum256(serialB)
 	b := blockpb.Block{
 		Header:      bh,
 		Transaction: nil,

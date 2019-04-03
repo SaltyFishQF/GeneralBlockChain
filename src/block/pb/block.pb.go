@@ -76,7 +76,7 @@ func (m *Block) GetHash() string {
 }
 
 type BlockHeader struct {
-	Index                int64    `protobuf:"varint,1,opt,name=index,proto3" json:"index,omitempty"`
+	Index                int64    `protobuf:"varint,1,opt,name=index,proto3" json:"index"`
 	PreviousHash         string   `protobuf:"bytes,2,opt,name=previousHash,proto3" json:"previousHash,omitempty"`
 	Digest               []byte   `protobuf:"bytes,3,opt,name=digest,proto3" json:"digest,omitempty"`
 	CloudAddress         string   `protobuf:"bytes,4,opt,name=cloudAddress,proto3" json:"cloudAddress,omitempty"`
