@@ -28,3 +28,15 @@ func CreateTransaction(txType int32, doc string, user string, value string, nonc
 		Timestamp: t,
 	}
 }
+
+func CalTXHash(tx *blockpb.Transaction) string {
+	hash := sha256.New()
+	hash.Write([]byte(tx.Doc))
+	hash.Write([]byte(tx.User))
+	hash.Write([]byte(tx.Value))
+	hash.Write([]byte(strconv.Itoa(int(tx.TxType))))
+	hash.Write([]byte(strconv.FormatInt(tx.Timestamp, 10)))
+	hash.Write([]byte(strconv.FormatInt(int64(tx.Nonce), 10)))
+	h := hash.Sum(nil)
+	return hex.EncodeToString(h[:])
+}

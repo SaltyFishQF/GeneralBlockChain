@@ -1,6 +1,9 @@
 package dao
 
-import "block/pb"
+import (
+	"block"
+	"block/pb"
+)
 
 //添加交易
 func AddTransaction(transaction *blockpb.Transaction) {
@@ -16,8 +19,10 @@ func AddTransaction(transaction *blockpb.Transaction) {
 }
 
 //修改交易的state值
-func UpdateTransactionState(id []string) {
-	//for i := range id{
-	//
-	//}
+func UpdateTransactionStateAndChainID(transactions []*blockpb.Transaction, id uint32) {
+	for _, tx := range transactions {
+		tx.ChainId = id
+		sql := "update tbl_transaction set state = 1, chain_id = ? where id = ?"
+		db.Exec(sql, tx.ChainId, block.CalTXHash(tx))
+	}
 }
