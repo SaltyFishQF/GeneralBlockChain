@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net/http"
 	"strconv"
+	"util"
 )
 
 func AddTransaction(w http.ResponseWriter, r *http.Request) {
@@ -17,4 +18,13 @@ func AddTransaction(w http.ResponseWriter, r *http.Request) {
 	t, _ := strconv.Atoi(txType)
 	controller.AddTransaction(int32(t), user, doc, value, uint64(nonce))
 	fmt.Fprintln(w, "success")
+}
+
+func GetAllTranactionByChainID(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	r.ParseForm()
+	id := r.Form["id"][0]
+	iid, _ := strconv.Atoi(id)
+	tx := controller.GetAllTranactionByChainID(uint32(iid))
+	fmt.Fprintln(w, util.ParseJson(tx))
 }

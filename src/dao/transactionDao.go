@@ -3,6 +3,7 @@ package dao
 import (
 	"block"
 	"block/pb"
+	"util"
 )
 
 //添加交易
@@ -25,4 +26,23 @@ func UpdateTransactionStateAndChainID(transactions []*blockpb.Transaction, id ui
 		sql := "update tbl_transaction set state = 1, chain_id = ? where id = ?"
 		db.Exec(sql, tx.ChainId, block.CalTXHash(tx))
 	}
+}
+
+func GetAllTranactionByChainID(id uint32) []*blockpb.Transaction {
+	sql := "select * from tbl_transaction where chain_id = ?"
+	x := ""
+	rows, err := db.Query(sql, id)
+	util.CheckErr(err)
+	txs := []*blockpb.Transaction{}
+	for rows.Next() {
+		tx := *new(blockpb.Transaction)
+		if err = rows.Scan(&tx.Id, &tx.TxType, &tx.Doc, &tx.User, &tx.Value, &tx.AgentOrganization, &tx.Nonce,
+			&tx.ChainId, &tx.Timestamp, &tx.Payload, &tx.InputData, &tx.RecordId, &tx.UserSign,
+			&tx.DocSign, &x); err == nil {
+			txs = append(txs, &tx)
+		} else {
+			panic(err)
+		}
+	}
+	return txs
 }

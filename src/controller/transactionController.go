@@ -50,6 +50,7 @@ func PreCalMerkleTreeRoot(transactions []*blockpb.Transaction) string {
 //把交易信息封装入区块
 func AddTransactionToBlock(transactions []*blockpb.Transaction) {
 	block2 := PreCreateBlock(transactions)
+	fmt.Println("---index---   =", block2.Header.Index)
 	//处理Block Header
 	merkleRoot := PreCalMerkleTreeRoot(transactions)
 	block2.Header.MerkleRoot = merkleRoot
@@ -59,7 +60,7 @@ func AddTransactionToBlock(transactions []*blockpb.Transaction) {
 
 	BLOCK = *block2
 	dao.SaveBlock(block2)
-	dao.UpdateTransactionStateAndChainID(transactions, uint32(BLOCK.Header.Index)+1)
+	dao.UpdateTransactionStateAndChainID(transactions, uint32(BLOCK.Header.Index))
 }
 
 //添加一个交易
@@ -71,4 +72,8 @@ func AddTransaction(txType int32, doc string, user string, value string, nonce u
 		AddTransactionToBlock(TXs)
 	}
 	dao.AddTransaction(tx)
+}
+
+func GetAllTranactionByChainID(id uint32) []*blockpb.Transaction {
+	return dao.GetAllTranactionByChainID(id)
 }

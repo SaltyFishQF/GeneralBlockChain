@@ -37,7 +37,7 @@ func SaveBlock(block2 *blockpb.Block) {
 func GetLastBlock() *blockpb.Block {
 	block2 := *new(blockpb.Block)
 	block2.Header = new(blockpb.BlockHeader)
-	sql := "select * from tbl_block limit 1"
+	sql := "select * from tbl_block order by height desc limit 1"
 	row := db.QueryRow(sql)
 
 	row.Scan(&block2.Header.Index, &block2.Header.PreviousHash,

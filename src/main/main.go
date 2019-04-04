@@ -15,6 +15,7 @@ func main() {
 	http.HandleFunc("/addTransaction", view.AddTransaction)
 	http.HandleFunc("/allBlock", view.GetAllBlock)
 	http.HandleFunc("/block", view.GetBlockByHash)
+	http.HandleFunc("/transaction", view.GetAllTranactionByChainID)
 	err := server.ListenAndServe()
 	if err != nil {
 		panic(err)

@@ -16,6 +16,7 @@ func CheckGenesisBlock() {
 		fmt.Println("Generate the Genesis Block")
 		b := block.CreateGenesisBlock()
 		dao.SaveBlock(b)
+		BLOCK = *b
 	} else {
 		BLOCK = *dao.GetLastBlock()
 	}
@@ -23,6 +24,8 @@ func CheckGenesisBlock() {
 
 func PreCreateBlock(transactions []*blockpb.Transaction) *blockpb.Block {
 	block := block.CreateBlock(BLOCK.Header.Index+1, BLOCK.Hash, time.Now().Unix(), transactions)
+	fmt.Println("BLOCK index", BLOCK.Header.Index+1)
+	fmt.Println("BLOCK index", BLOCK.Header.Index)
 	return block
 }
 
