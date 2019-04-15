@@ -1,7 +1,7 @@
 package dao
 
 import (
-	"block/pb"
+	"block"
 	"fmt"
 	"mydb"
 )
@@ -24,7 +24,7 @@ func GetLastBlockNum() int64 {
 	return index
 }
 
-func SaveBlock(block2 *blockpb.Block) {
+func SaveBlock(block2 *block.Block) {
 	sql := "insert into tbl_block values (?,?,?,?,?,?,?,?,?)"
 	_, err := db.Exec(sql, block2.Header.Index, block2.Header.PreviousHash,
 		block2.Header.Digest, block2.Header.CloudAddress, block2.Header.Timestamp,
@@ -34,9 +34,9 @@ func SaveBlock(block2 *blockpb.Block) {
 	}
 }
 
-func GetLastBlock() *blockpb.Block {
-	block2 := *new(blockpb.Block)
-	block2.Header = new(blockpb.BlockHeader)
+func GetLastBlock() *block.Block {
+	block2 := *new(block.Block)
+	block2.Header = new(block.BlockHeader)
 	sql := "select * from tbl_block order by height desc limit 1"
 	row := db.QueryRow(sql)
 
@@ -46,13 +46,13 @@ func GetLastBlock() *blockpb.Block {
 	return &block2
 }
 
-func GetAllBlock() []*blockpb.Block {
-	blocks := []*blockpb.Block{}
+func GetAllBlock() []*block.Block {
+	blocks := []*block.Block{}
 	sql := "select * from tbl_block"
 	rows, err := db.Query(sql)
 	for rows.Next() {
-		block2 := new(blockpb.Block)
-		header := new(blockpb.BlockHeader)
+		block2 := new(block.Block)
+		header := new(block.BlockHeader)
 		block2.Header = header
 		if err = rows.Scan(&block2.Header.Index, &block2.Header.PreviousHash,
 			&block2.Header.Digest, &block2.Header.CloudAddress, &block2.Header.Timestamp,
@@ -65,11 +65,11 @@ func GetAllBlock() []*blockpb.Block {
 	return blocks
 }
 
-func GetBlockByHash(h string) *blockpb.Block {
+func GetBlockByHash(h string) *block.Block {
 	sql := "select * from tbl_block where hash = ?"
 	rows, err := db.Query(sql, h)
-	block2 := new(blockpb.Block)
-	header := new(blockpb.BlockHeader)
+	block2 := new(block.Block)
+	header := new(block.BlockHeader)
 	for rows.Next() {
 		block2.Header = header
 		if err = rows.Scan(&block2.Header.Index, &block2.Header.PreviousHash,

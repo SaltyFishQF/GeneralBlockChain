@@ -9,7 +9,7 @@ import (
 
 func GetAllBlock(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Origin", "*")
-	w.Header().Set("Access-Control-Allow-Headers", "Content-Type,Access-Token")
+	//w.Header().Set("Access-Control-Allow-Headers", "Content-Type,Access-Token")
 	blocks := controller.GetAllBlock()
 	res := util.ParseJson(blocks)
 	fmt.Fprintln(w, res)

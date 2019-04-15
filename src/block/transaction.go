@@ -1,42 +1,75 @@
 package block
 
 import (
-	"block/pb"
+	"bytes"
 	"crypto/sha256"
+	"encoding/gob"
 	"encoding/hex"
 	"strconv"
 	"time"
+	"util"
 )
 
-func CreateTransaction(txType int32, doc string, user string, value string, nonce uint64) *blockpb.Transaction {
-	t := time.Now().Unix()
-	hash := sha256.New()
-	hash.Write([]byte(doc))
-	hash.Write([]byte(user))
-	hash.Write([]byte(value))
-	hash.Write([]byte(strconv.Itoa(int(txType))))
-	hash.Write([]byte(strconv.FormatInt(t, 10)))
-	hash.Write([]byte(strconv.FormatInt(int64(nonce), 10)))
-	h := hash.Sum(nil)
-	return &blockpb.Transaction{
-		Id:        hex.EncodeToString(h),
-		TxType:    txType,
-		Doc:       doc,
-		User:      user,
-		Value:     value,
-		Nonce:     nonce,
-		Timestamp: t,
-	}
+type Transaction struct {
+	Id                string
+	TxType            int32
+	From              string
+	To                string
+	Value             string
+	AgentOrganization string
+	Nonce             uint64
+	ChainId           int64
+	Timestamp         int64
+	Payload           []byte
+	InputData         string
+	RecordId          string
+	UserSign          []byte
+	DocSign           []byte
 }
 
-func CalTXHash(tx *blockpb.Transaction) string {
+//HashCode returns the hash of transaction
+func (tx *Transaction) HashCode() (string, error) {
+	ser, err := tx.Serialize()
+	hash := util.ToHash(ser)
+	return hash, err
+}
+
+//Serialize converts Transaction struct to []byte
+func (tx *Transaction) Serialize() ([]byte, error) {
+	var buf bytes.Buffer
+	enc := gob.NewEncoder(&buf)
+	err := enc.Encode(tx)
+	return buf.Bytes(), err
+}
+
+//CalHash returns the hash of the information in transaction
+func (tx *Transaction) CalHash() string {
 	hash := sha256.New()
-	hash.Write([]byte(tx.Doc))
-	hash.Write([]byte(tx.User))
+	hash.Write([]byte(tx.From))
+	hash.Write([]byte(tx.To))
 	hash.Write([]byte(tx.Value))
 	hash.Write([]byte(strconv.Itoa(int(tx.TxType))))
 	hash.Write([]byte(strconv.FormatInt(tx.Timestamp, 10)))
 	hash.Write([]byte(strconv.FormatInt(int64(tx.Nonce), 10)))
 	h := hash.Sum(nil)
 	return hex.EncodeToString(h[:])
+}
+
+//CreateTransaction creates a new transaction
+func CreateTransaction(txType int32, from string, to string, value string, nonce uint64) *Transaction {
+	t := time.Now().Unix()
+	tx := Transaction{
+		TxType:    txType,
+		From:      from,
+		To:        to,
+		Value:     value,
+		Nonce:     nonce,
+		Timestamp: t,
+	}
+	tx.Id = tx.CalHash()
+	return &tx
+}
+
+func UpLoadTransaction() {
+
 }

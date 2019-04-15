@@ -2,13 +2,12 @@ package controller
 
 import (
 	"block"
-	"block/pb"
 	"dao"
 	"fmt"
 	"time"
 )
 
-var BLOCK blockpb.Block
+var BLOCK block.Block
 
 //检查创世块是否存在
 func CheckGenesisBlock() {
@@ -22,17 +21,17 @@ func CheckGenesisBlock() {
 	}
 }
 
-func PreCreateBlock(transactions []*blockpb.Transaction) *blockpb.Block {
+func PreCreateBlock(transactions []*block.Transaction) *block.Block {
 	block := block.CreateBlock(BLOCK.Header.Index+1, BLOCK.Hash, time.Now().Unix(), transactions)
 	fmt.Println("BLOCK index", BLOCK.Header.Index+1)
 	fmt.Println("BLOCK index", BLOCK.Header.Index)
 	return block
 }
 
-func GetAllBlock() []*blockpb.Block {
+func GetAllBlock() []*block.Block {
 	return dao.GetAllBlock()
 }
 
-func GetBlockByHash(h string) *blockpb.Block {
+func GetBlockByHash(h string) *block.Block {
 	return dao.GetBlockByHash(h)
 }

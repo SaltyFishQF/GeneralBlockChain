@@ -23,13 +23,14 @@ function GetPar(name) {
 
 function initBlock(res) {
     let block = JSON.parse(res)
-    index = block.header.index
-    document.getElementById('bindex').innerHTML = `${block.header.index}`
-    document.getElementById('btime').innerHTML = `${block.header.timestamp}`
-    document.getElementById('bhash').innerHTML = `${block.hash}`
-    document.getElementById('bprehash').innerHTML = `<a href="./../html/singleBlock.html?hash=${block.header.previousHash}">${block.header.previousHash}</a>`
-    document.getElementById('btxnum').innerHTML = `${block.header.size}`
-    document.getElementById('bmtroot').innerHTML = `${block.header.merkleRoot}`
+    index = block.Header.Index
+    document.getElementById('bindex').innerHTML = `${block.Header.Index}`
+    document.getElementById('bindex2').innerHTML = `${block.Header.Index}`
+    document.getElementById('btime').innerHTML = `${block.Header.Timestamp}`
+    document.getElementById('bhash').innerHTML = `${block.Hash}`
+    document.getElementById('bprehash').innerHTML = `<a href="./../html/singleBlock.html?hash=${block.Header.PreviousHash}">${block.Header.PreviousHash}</a>`
+    document.getElementById('btxnum').innerHTML = `${block.Header.Size}`
+    document.getElementById('bmtroot').innerHTML = `${block.Header.MerkleRoot}`
 }
 
 function initTX() {
@@ -41,7 +42,7 @@ function initTX() {
             let li = document.getElementById("txList")
             let list = JSON.parse(res)
             for (let i = 0; i < list.length; i++) {
-                li.innerHTML += `<tr><td>${list[i].id}</td><td>${list[i].user}</td><td>${list[i].doc}</td><td>${list[i].inputData}</td></tr>`
+                li.innerHTML += `<tr><td>${list[i].Id}</td><td>${list[i].From}</td><td>${list[i].To}</td><td>${list[i].InputData}</td></tr>`
             }
         },
     })
