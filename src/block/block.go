@@ -16,10 +16,10 @@ type Block struct {
 }
 
 //HashCode returns the hash of the block
-func (block *Block) HashCode() (string, error) {
-	ser, err := block.Serialize()
+func (block *Block) HashCode() string {
+	ser, _ := block.Serialize()
 	hash := util.ToHash(ser)
-	return hash, err
+	return hash
 }
 
 //Serialize converts block to bytes
@@ -58,9 +58,10 @@ func (block *Block) AddTransaction(txs []*Transaction) error {
 	block.Transaction = txs
 	s := *new([]string)
 	for i := 0; i < len(txs); i++ {
-		s = append(s, txs[i].Id)
+		s = append(s, txs[i].Address)
 	}
 	block.Header.MerkleRoot = CalMerkleTreeRoot(s)
+	block.Hash = block.HashCode()
 	return nil
 }
 

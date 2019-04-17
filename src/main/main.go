@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	//prk = "60c65722e914c9665445f14fcf9cf777c5c51ea62597e345c9ecc794730123f0"
 	controller.CheckGenesisBlock()
 	server := http.Server{
 		Addr: "localhost:8080",
@@ -20,4 +21,9 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
+	//prk, pub, _ := algorithm.GetKey()
+	//rk := algorithm.PrivateKeyToByte(prk)
+	//ub := algorithm.PublicKeyToByte(pub)
+	//fmt.Println(hex.EncodeToString(rk), hex.EncodeToString(ub))
 }

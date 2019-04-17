@@ -41,8 +41,9 @@ function initTX() {
         success: function f(res) {
             let li = document.getElementById("txList")
             let list = JSON.parse(res)
+            console.log(list)
             for (let i = 0; i < list.length; i++) {
-                li.innerHTML += `<tr><td>${list[i].Id}</td><td>${list[i].From}</td><td>${list[i].To}</td><td>${list[i].InputData}</td></tr>`
+                li.innerHTML += `<tr><td>${list[i].Address}</td><td>${list[i].From}</td><td>${list[i].To}</td><td>${list[i].InputData}</td></tr>`
             }
         },
     })

@@ -1,22 +1,34 @@
 package view
 
 import (
+	"algorithm"
 	"controller"
+	"encoding/hex"
 	"fmt"
+	"model"
 	"net/http"
 	"strconv"
+	"time"
 	"util"
 )
 
 func AddTransaction(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	txType := r.Form["type"][0]
-	user := r.Form["user"][0]
-	doc := r.Form["doc"][0]
-	value := r.Form["value"][0]
-	nonce, _ := strconv.ParseInt(r.Form["nonce"][0], 10, 64)
+	from := r.Form["from"][0]
+	to := r.Form["to"][0]
+	medical := model.MedicalRecord{
+		Desease: r.Form["desease"][0],
+		Info:    r.Form["info"][0],
+		Time:    time.Now(),
+		User:    to,
+		Doc:     from,
+	}
+	hexhash, err := hex.DecodeString(medical.HashCode())
+	util.CheckErr(err)
+	medical.Addr = hex.EncodeToString(algorithm.Base58Encode(hexhash))
 	t, _ := strconv.Atoi(txType)
-	controller.AddTransaction(int32(t), user, doc, value, uint64(nonce))
+	controller.AddTransaction(int32(t), from, to, medical)
 	fmt.Fprintln(w, "success")
 }
 

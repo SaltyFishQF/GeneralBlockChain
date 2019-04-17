@@ -1,30 +1,32 @@
 package block
 
 import (
+	"algorithm"
 	"bytes"
 	"crypto/sha256"
 	"encoding/gob"
 	"encoding/hex"
+	"model"
 	"strconv"
 	"time"
 	"util"
 )
 
 type Transaction struct {
-	Id                string
-	TxType            int32
-	From              string
-	To                string
-	Value             string
-	AgentOrganization string
-	Nonce             uint64
-	ChainId           int64
-	Timestamp         int64
-	Payload           []byte
-	InputData         string
-	RecordId          string
-	UserSign          []byte
-	DocSign           []byte
+	Address string
+	TxType  int32
+	From    string
+	To      string
+	Value   string
+	//AgentOrganization string
+	Nonce     uint64
+	ChainId   int64
+	Timestamp int64
+	Payload   []byte
+	InputData string
+	RecordId  string
+	FromSign  []byte
+	ToSign    []byte
 }
 
 //HashCode returns the hash of transaction
@@ -56,20 +58,26 @@ func (tx *Transaction) CalHash() string {
 }
 
 //CreateTransaction creates a new transaction
-func CreateTransaction(txType int32, from string, to string, value string, nonce uint64) *Transaction {
+func CreateTransaction(txType int32, from string, to string, value model.MedicalRecord, nonce uint64) *Transaction {
 	t := time.Now().Unix()
+
+	pt, _ := hex.DecodeString(value.Addr)
+	pk, _ := hex.DecodeString(to)
+	bvalue, err := algorithm.ECCEncrypt(pt, algorithm.ToECDSAPub(pk))
+	util.CheckErr(err)
+	svalue := hex.EncodeToString(bvalue)
+
 	tx := Transaction{
 		TxType:    txType,
 		From:      from,
 		To:        to,
-		Value:     value,
+		Value:     svalue,
 		Nonce:     nonce,
 		Timestamp: t,
 	}
-	tx.Id = tx.CalHash()
+
+	tx.Address = tx.CalHash()
 	return &tx
 }
 
-func UpLoadTransaction() {
-
-}
+//todo: To公钥加密Tx的Hash作为Tx的地址， 存入数据库
