@@ -10,9 +10,9 @@ func AddTransaction(transaction *block.Transaction) {
 	sql := "insert into tbl_transaction (address, txType, from_key, to_key, record_addr," +
 		" nonce, chain_id, timestamp, payload, user_aec_key, record_id, fromSign, toSign)" +
 		" values(?,?,?,?,?,?,?,?,?,?,?,?,?)"
-	_, err := db.Exec(sql, transaction.Address, transaction.TxType, transaction.From, transaction.To, transaction.Value,
+	_, err := db.Exec(sql, transaction.Address, transaction.TxType, transaction.From, transaction.To, transaction.RecordAddr,
 		transaction.Nonce, transaction.ChainId, transaction.Timestamp,
-		transaction.Payload, transaction.InputData, transaction.RecordId, transaction.FromSign, transaction.ToSign)
+		transaction.Payload, transaction.UserAecKey, transaction.RecordId, transaction.FromSign, transaction.ToSign)
 	if err != nil {
 		panic(err)
 	}
@@ -37,8 +37,8 @@ func GetAllTranactionByChainID(id uint32) []*block.Transaction {
 	txs := []*block.Transaction{}
 	for rows.Next() {
 		tx := *new(block.Transaction)
-		if err = rows.Scan(&tx.Address, &tx.TxType, &tx.From, &tx.To, &tx.Value, &tx.Nonce,
-			&tx.ChainId, &tx.Timestamp, &tx.Payload, &tx.InputData, &tx.RecordId, &tx.FromSign,
+		if err = rows.Scan(&tx.Address, &tx.TxType, &tx.From, &tx.To, &tx.RecordAddr, &tx.Nonce,
+			&tx.ChainId, &tx.Timestamp, &tx.Payload, &tx.UserAecKey, &tx.RecordId, &tx.FromSign,
 			&tx.ToSign, &x); err == nil {
 			txs = append(txs, &tx)
 		} else {

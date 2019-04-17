@@ -1,32 +1,30 @@
 package block
 
 import (
-	"algorithm"
 	"bytes"
 	"crypto/sha256"
 	"encoding/gob"
 	"encoding/hex"
-	"model"
 	"strconv"
 	"time"
 	"util"
 )
 
 type Transaction struct {
-	Address string
-	TxType  int32
-	From    string
-	To      string
-	Value   string
+	Address    string
+	TxType     int32
+	From       string
+	To         string
+	RecordAddr string
 	//AgentOrganization string
-	Nonce     uint64
-	ChainId   int64
-	Timestamp int64
-	Payload   []byte
-	InputData string
-	RecordId  string
-	FromSign  []byte
-	ToSign    []byte
+	Nonce      uint64
+	ChainId    int64
+	Timestamp  int64
+	Payload    []byte
+	UserAecKey string
+	RecordId   string
+	FromSign   []byte
+	ToSign     []byte
 }
 
 //HashCode returns the hash of transaction
@@ -49,7 +47,7 @@ func (tx *Transaction) CalHash() string {
 	hash := sha256.New()
 	hash.Write([]byte(tx.From))
 	hash.Write([]byte(tx.To))
-	hash.Write([]byte(tx.Value))
+	hash.Write([]byte(tx.RecordAddr))
 	hash.Write([]byte(strconv.Itoa(int(tx.TxType))))
 	hash.Write([]byte(strconv.FormatInt(tx.Timestamp, 10)))
 	hash.Write([]byte(strconv.FormatInt(int64(tx.Nonce), 10)))
@@ -58,22 +56,17 @@ func (tx *Transaction) CalHash() string {
 }
 
 //CreateTransaction creates a new transaction
-func CreateTransaction(txType int32, from string, to string, value model.MedicalRecord, nonce uint64) *Transaction {
+func CreateTransaction(txType int32, from string, to string, recordAddr string, userAec string, nonce uint64) *Transaction {
 	t := time.Now().Unix()
 
-	pt, _ := hex.DecodeString(value.Addr)
-	pk, _ := hex.DecodeString(to)
-	bvalue, err := algorithm.ECCEncrypt(pt, algorithm.ToECDSAPub(pk))
-	util.CheckErr(err)
-	svalue := hex.EncodeToString(bvalue)
-
 	tx := Transaction{
-		TxType:    txType,
-		From:      from,
-		To:        to,
-		Value:     svalue,
-		Nonce:     nonce,
-		Timestamp: t,
+		TxType:     txType,
+		From:       from,
+		To:         to,
+		RecordAddr: recordAddr,
+		UserAecKey: userAec,
+		Nonce:      nonce,
+		Timestamp:  t,
 	}
 
 	tx.Address = tx.CalHash()

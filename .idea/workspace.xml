@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a85c0c62-4911-4095-a2cb-3342b43a5c1a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/algorithm/AEC.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algorithm/Base58.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algorithm/big.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algorithm/ecc.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algorithm/ecies.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algorithm/md5.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algorithm/params.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algorithm/rsa.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/medicalRecordDao.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/userDao.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/medicalRecord.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/block/block.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/block/block.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/block/transaction.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/block/transaction.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/transactionController.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/transactionController.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/transactionDao.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/transactionDao.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/transactionView.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/transactionView.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/js/singleBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/js/singleBlock.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,7 +43,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
-          <entry key="go" value="172" />
+          <entry key="go" value="176" />
           <entry key="html" value="13" />
           <entry key="js" value="25" />
           <entry key="proto" value="5" />
@@ -67,7 +53,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="Go" value="172" />
+          <entry key="Go" value="176" />
           <entry key="HTML" value="13" />
           <entry key="JavaScript" value="25" />
           <entry key="PROTO" value="5" />
@@ -77,20 +63,20 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="36" />
-          <entry key="go" value="16546" />
+          <entry key="go" value="16819" />
           <entry key="html" value="782" />
           <entry key="js" value="1677" />
           <entry key="proto" value="940" />
-          <entry key="txt" value="236" />
+          <entry key="txt" value="254" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="36" />
-          <entry key="Go" value="16546" />
+          <entry key="Go" value="16819" />
           <entry key="HTML" value="783" />
           <entry key="JavaScript" value="1676" />
-          <entry key="PLAIN_TEXT" value="236" />
+          <entry key="PLAIN_TEXT" value="254" />
           <entry key="PROTO" value="940" />
         </counts>
       </usages-collector>
@@ -108,20 +94,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/transactionView.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+            <state relative-caret-position="241">
+              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
               <folding>
                 <element signature="e#14#76#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/algorithm/AEC.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -138,32 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/algorithm/Base58.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="703">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
-              <folding>
-                <element signature="e#18#115#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/transactionController.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-14">
-              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/dao/transactionDao.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="24" column="85" lean-forward="true" selection-start-line="24" selection-start-column="85" selection-end-line="24" selection-end-column="85" />
+            <state relative-caret-position="288">
+              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -171,8 +127,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/block/transaction.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1584">
-              <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+            <state relative-caret-position="178">
+              <caret line="58" column="16" lean-forward="true" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/medicalRecord.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="43">
+              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/blockController.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -185,6 +159,15 @@
               <folding>
                 <element signature="e#19#164#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/medicalRecordDao.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -273,17 +256,17 @@
         <option value="$PROJECT_DIR$/webapp/html/singleBlock.html" />
         <option value="$PROJECT_DIR$/src/block/block.go" />
         <option value="$PROJECT_DIR$/webapp/js/singleBlock.js" />
-        <option value="$PROJECT_DIR$/src/dao/transactionDao.go" />
         <option value="$PROJECT_DIR$/src/algorithm/rsa.go" />
         <option value="$PROJECT_DIR$/src/dao/medicalRecordDap.go" />
         <option value="$PROJECT_DIR$/src/dao/userDao.go" />
-        <option value="$PROJECT_DIR$/src/controller/transactionController.go" />
         <option value="$PROJECT_DIR$/src/dao/medicalRecordDao.go" />
         <option value="$PROJECT_DIR$/src/model/medicalRecord.go" />
         <option value="$PROJECT_DIR$/src/algorithm/Base58.go" />
-        <option value="$PROJECT_DIR$/src/view/transactionView.go" />
         <option value="$PROJECT_DIR$/src/algorithm/ecc.go" />
         <option value="$PROJECT_DIR$/src/main/main.go" />
+        <option value="$PROJECT_DIR$/src/dao/transactionDao.go" />
+        <option value="$PROJECT_DIR$/src/view/transactionView.go" />
+        <option value="$PROJECT_DIR$/src/controller/transactionController.go" />
         <option value="$PROJECT_DIR$/src/block/transaction.go" />
       </list>
     </option>
@@ -427,7 +410,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555491345593" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555493177720" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
@@ -498,7 +481,7 @@
       <workItem from="1554195850671" duration="31041000" />
       <workItem from="1554880363208" duration="3435000" />
       <workItem from="1555056873955" duration="27824000" />
-      <workItem from="1555482187328" duration="7495000" />
+      <workItem from="1555482187328" duration="8619000" />
     </task>
     <task id="LOCAL-00001" summary="add slice">
       <created>1553878490787</created>
@@ -577,11 +560,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555322122699</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="demo v0.1.1 加密">
+      <created>1555491461571</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1555491461572</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124498000" />
+    <option name="totallyTimeSpent" value="125622000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -601,7 +591,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.17032968" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.17032968" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.3298731" />
@@ -609,7 +599,7 @@
       <window_info anchor="bottom" id="Statistic" order="3" weight="0.3298731" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.4993895" visible="true" weight="0.3298731" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.4993895" visible="true" weight="0.3298731" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.39907727" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
@@ -645,7 +635,8 @@
     <MESSAGE value="demo v0.0.2&#10;接上前端，改用json方式传值" />
     <MESSAGE value="demo v0.0.3&#10;修复之前的一些小bug，前端基本能用。" />
     <MESSAGE value="demo v0.1.0&#10;使用gob重构" />
-    <option name="LAST_COMMIT_MESSAGE" value="demo v0.1.0&#10;使用gob重构" />
+    <MESSAGE value="demo v0.1.1 加密" />
+    <option name="LAST_COMMIT_MESSAGE" value="demo v0.1.1 加密" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/webapp/html/index.html">
@@ -767,19 +758,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/algorithm/params.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-711" />
+        <state relative-caret-position="-711">
+          <folding>
+            <element signature="e#1744#1863#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/algorithm/rsa.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-114">
           <caret line="123" column="6" lean-forward="true" selection-start-line="123" selection-start-column="6" selection-end-line="123" selection-end-column="6" />
+          <folding>
+            <element signature="e#19#153#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/algorithm/ecies.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-585" />
+        <state relative-caret-position="-585">
+          <folding>
+            <element signature="e#1628#1755#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/blockDao.go">
@@ -862,49 +864,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/blockController.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/medicalRecordDao.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-          <folding>
-            <element signature="e#13#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/medicalRecord.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding>
-            <element signature="e#15#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/algorithm/Base58.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="703">
           <caret line="38" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="e#18#115#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/transactionView.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-          <folding>
-            <element signature="e#14#76#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -916,13 +881,6 @@
           <folding>
             <element signature="e#19#59#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithm/AEC.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -960,24 +918,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/transactionController.go">
+    <entry file="file://$PROJECT_DIR$/src/controller/blockController.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="184">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/block/transaction.go">
+    <entry file="file://$PROJECT_DIR$/src/model/medicalRecord.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+        <state relative-caret-position="43">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithm/AEC.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/transactionDao.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="24" column="85" lean-forward="true" selection-start-line="24" selection-start-column="85" selection-end-line="24" selection-end-column="85" />
+        <state relative-caret-position="216">
+          <caret line="12" column="124" selection-start-line="12" selection-start-column="124" selection-end-line="12" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/medicalRecordDao.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/transactionView.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding>
+            <element signature="e#14#76#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/block/transaction.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="58" column="16" lean-forward="true" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/transactionController.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
         </state>
       </provider>
     </entry>
