@@ -8,11 +8,11 @@ import (
 //添加交易
 func AddTransaction(transaction *block.Transaction) {
 	sql := "insert into tbl_transaction (address, txType, from_key, to_key, record_addr," +
-		" nonce, chain_id, timestamp, payload, user_aec_key, record_id, fromSign, toSign)" +
+		" nonce, chain_id, timestamp, payload, user_aec_key, record_id, fromSign)" +
 		" values(?,?,?,?,?,?,?,?,?,?,?,?,?)"
 	_, err := db.Exec(sql, transaction.Address, transaction.TxType, transaction.From, transaction.To, transaction.RecordAddr,
 		transaction.Nonce, transaction.ChainId, transaction.Timestamp,
-		transaction.Payload, transaction.UserAecKey, transaction.RecordId, transaction.FromSign, transaction.ToSign)
+		transaction.Payload, transaction.UserAecKey, transaction.RecordId, transaction.FromSign)
 	if err != nil {
 		panic(err)
 	}
@@ -38,8 +38,7 @@ func GetAllTranactionByChainID(id uint32) []*block.Transaction {
 	for rows.Next() {
 		tx := *new(block.Transaction)
 		if err = rows.Scan(&tx.Address, &tx.TxType, &tx.From, &tx.To, &tx.RecordAddr, &tx.Nonce,
-			&tx.ChainId, &tx.Timestamp, &tx.Payload, &tx.UserAecKey, &tx.RecordId, &tx.FromSign,
-			&tx.ToSign, &x); err == nil {
+			&tx.ChainId, &tx.Timestamp, &tx.Payload, &tx.UserAecKey, &tx.RecordId, &tx.FromSign, &x); err == nil {
 			txs = append(txs, &tx)
 		} else {
 			panic(err)

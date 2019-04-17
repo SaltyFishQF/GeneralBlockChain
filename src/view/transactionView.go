@@ -15,8 +15,9 @@ func AddTransaction(w http.ResponseWriter, r *http.Request) {
 	to := r.Form["to"][0]
 	record := r.Form["recAddr"][0]
 	userAec := r.Form["aec"][0]
+	fromSign := r.Form["sign"][0]
 	t, _ := strconv.Atoi(txType)
-	controller.AddTransaction(int32(t), from, to, record, userAec)
+	controller.AddTransaction(int32(t), from, to, record, userAec, fromSign)
 	fmt.Fprintln(w, "success")
 }
 

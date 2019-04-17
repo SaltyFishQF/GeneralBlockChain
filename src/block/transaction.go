@@ -23,8 +23,7 @@ type Transaction struct {
 	Payload    []byte
 	UserAecKey string
 	RecordId   string
-	FromSign   []byte
-	ToSign     []byte
+	FromSign   string
 }
 
 //HashCode returns the hash of transaction
@@ -56,7 +55,7 @@ func (tx *Transaction) CalHash() string {
 }
 
 //CreateTransaction creates a new transaction
-func CreateTransaction(txType int32, from string, to string, recordAddr string, userAec string, nonce uint64) *Transaction {
+func CreateTransaction(txType int32, from string, to string, recordAddr string, userAec string, nonce uint64, fromSign string) *Transaction {
 	t := time.Now().Unix()
 
 	tx := Transaction{
@@ -65,6 +64,7 @@ func CreateTransaction(txType int32, from string, to string, recordAddr string, 
 		To:         to,
 		RecordAddr: recordAddr,
 		UserAecKey: userAec,
+		FromSign:   fromSign,
 		Nonce:      nonce,
 		Timestamp:  t,
 	}
